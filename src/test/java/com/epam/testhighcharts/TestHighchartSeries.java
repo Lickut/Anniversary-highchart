@@ -1,4 +1,4 @@
-package com.epam.testHighCharts;
+package com.epam.testhighcharts;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

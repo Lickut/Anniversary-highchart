@@ -24,7 +24,7 @@
 				<version>2.18.1</version>
 				<configuration>
 					<includes>
-						<include>**/AllTests.java</include>
+						<include>**/Test*.java</include>
 					</includes>
 				</configuration>
 			</plugin>

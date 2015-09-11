@@ -23,30 +23,8 @@ public class HighChartsUtil {
 	private AnniversaryChart chart;
 	private String containerID = "container";
 
-	public HighChartsUtil() throws MalformedURLException {
+	public HighChartsUtil() {
 		driver = new FirefoxDriver();
-		
-//		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-//		driver = new ChromeDriver();
-		
-//		 System.setProperty("webdriver.chrome.driver", "D:\\operadriver.exe");
-//		 driver = new OperaDriver();
-//		DesiredCapabilities capabilities = DesiredCapabilities.opera();
-//
-//		ChromeOptions options = new ChromeOptions();
-//		options.setBinary("C:\\Program Files (x86)\\Opera\\launcher.exe");
-//
-//		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-//
-//		driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"),capabilities);
-		
-//		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Denis\\Downloads\\operadriver_win32\\operadriver.exe");
-//	     driver = new ChromeDriver();
-		
-//		System.setProperty("webdriver.ie.driver","D:\\IEDriverServer.exe");
-//		DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
-//		dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-//		driver = new InternetExplorerDriver(dc);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}

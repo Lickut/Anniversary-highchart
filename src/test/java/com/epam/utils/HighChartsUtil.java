@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.epam.charts.AnniversaryChart;
@@ -16,10 +17,9 @@ public class HighChartsUtil {
 	private AnniversaryChart chart;
 	private String containerID = "container";
 
-	public HighChartsUtil() {
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+	public HighChartsUtil(WebDriver driver) {
+		this.driver = driver;
+		chart = new AnniversaryChart(driver, containerID);
 	}
 
 	public List<List<String>> getSeriesTooltips(String seriesTitle) {
@@ -43,10 +43,6 @@ public class HighChartsUtil {
 
 	public void closeBrowser() {
 		driver.close();
-	}
-
-	public void switchToFrame(String frameLocation) {
-		driver.switchTo().frame(driver.findElement(By.xpath(frameLocation)));
 	}
 
 	public void setAnniversaryChart() {
